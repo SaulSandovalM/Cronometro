@@ -7,7 +7,6 @@ export default class Controls extends Component {
     isRunning: PropTypes.bool,
     start: PropTypes.func.isRequired,
     stop: PropTypes.func.isRequired,
-    reset: PropTypes.func.isRequired,
     addLapTime: PropTypes.func.isRequired
   }
 
@@ -16,7 +15,7 @@ export default class Controls extends Component {
   }
 
   render() {
-    const { isRunning, start, stop, reset, addLapTime } = this.props
+    const { isRunning, start, stop } = this.props
 
     return (
       <div className='Controls'>
@@ -40,22 +39,6 @@ export default class Controls extends Component {
           </button>
           : null
         }
-        <button
-          onClick={ reset }
-          disabled={ isRunning }
-          className='Controls__button'
-          ref='resetBtn'
-        >
-          Reset
-        </button>
-        <button
-          onClick={ addLapTime }
-          disabled={ !isRunning }
-          className='Controls__button'
-          ref='lapBtn'
-        >
-          Marca
-        </button>
       </div>
     )
   }

@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import './App.css'
-import Stopwatch from './stopwatch/components/stopwatch/Stopwatch'
+import { Routes } from './Routes'
 
 export default class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <Stopwatch />
+      <div>
+        <Routes />
       </div>
     )
   }
