@@ -90,34 +90,253 @@ export default class Stopwatch extends Component {
 
     return (
       <div className='Stopwatch'>
-        <h1> Cronometro </h1>
+        <div style={{ fontSize: '40px', paddingTop: '30px' }}> Cronómetro </div>
         <Timer time={time} />
-        <input
-          id='nombre'
-          required
-          name='nombre'
-          onChange={this.handleChange.bind(this)}
-          value={this.state.nombre}
-          ref={nombre => this.inputNombre = nombre}
-          placeholder='Ingresa tu nombre por favor'
-        />
-        <select
-          id='agencia'
-          required
-          name='agencia'
-          value={this.state.agencia}
-          onChange={this.handleChange.bind(this)}
-          ref={agencia => this.inputAgencia = agencia}
-        >
-          <option id='agencia'>CAT1</option>
-          <option id='agencia'>CAT2</option>
-          <option id='agencia'>CAT3</option>
-          <option id='agencia'>CAT4</option>
-          <option id='agencia'>CAT5</option>
-          <option id='agencia'>CAT6</option>
-          <option id='agencia'>CAT7</option>
-          <option id='agencia'>CAT8</option>
-        </select>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', textAlign: 'left' }}>
+            <div style={{ width: '40%' }}>
+            Ingrese su nombre:
+            </div>
+          </div>
+          <div>
+            <input
+              style={{ width: '40%', marginBottom: '30px' }}
+              id='nombre'
+              required
+              name='nombre'
+              onChange={this.handleChange.bind(this)}
+              value={this.state.nombre}
+              ref={nombre => this.inputNombre = nombre}
+            />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', textAlign: 'left' }}>
+            <div style={{ width: '50%' }}>
+            Seleccione su agencia:
+            </div>
+          </div>
+          <div>
+            <select
+              style={{ width: '50%' }}
+              id='agencia'
+              required
+              name='agencia'
+              value={this.state.agencia}
+              onChange={this.handleChange.bind(this)}
+              ref={agencia => this.inputAgencia = agencia}
+            >
+              <option />
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Atotonilco el Grande, Atotonilco el Grande, UIM I'>Subprocuraduria de Procedimientos Penales Región Orinte, Atotonilco el Grande, Atotonilco el Grande, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Atotonilco el Grande, Atotonilco el Grande, UIM II'>Subprocuraduria de Procedimientos Penales Región Orinte, Atotonilco el Grande, Atotonilco el Grande, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI I'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI II'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI III'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, UI IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, Centro de Atención Temprana 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, Centro de Atención Temprana 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Huejutla de Reyes, Huejutla de Reyes, Centro de Atención Temprana 3er. Turno'</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Metztitlan, Metztitlan, UIM Unica'>Subprocuraduria de Procedimientos Penales Región Orinte, Metztitlan, Metztitlan, UIM Unica</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Molango, Molango, UIM Unica'>Subprocuraduria de Procedimientos Penales Región Orinte, Molango, Molango, UIM Unica</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS I'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS II'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS III'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS V'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, DECOVIS V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos I'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos II'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos III'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos V'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Robos V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales I'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales II'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales III'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Patrimoniales IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Diversos I'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Diversos I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Diversos II'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Diversos II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Diversos III'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Diversos III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido I'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido II'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido III'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido V'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Con Detenido V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Tortura I'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Tortura I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Tortura II'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Tortura II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Tortura III'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Tortura III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Casos Masivos'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Casos Masivos</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Sector Central 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Sector Central 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Sector Central 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Sector Central 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Sector Central 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Sector Central 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Hospital General 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Hospital General 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Hospital General 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Hospital General 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Hospital General 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Hospital General 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Municipal 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Municipal 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Municipal 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Municipal 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Municipal 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Municipal 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Estatal 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Estatal 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Estatal 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Estatal 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Estatal 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Seguridad Pública Estatal 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Providencia (Mineral de la Reforma) 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Providencia (Mineral de la Reforma) 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Providencia (Mineral de la Reforma) 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Providencia (Mineral de la Reforma) 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Providencia (Mineral de la Reforma) 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Pachuca, Pachuca, Centro de Atención Temprana Providencia (Mineral de la Reforma) 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tenango, Tenango, UIM I'>Subprocuraduria de Procedimientos Penales Región Orinte, Tenango, Tenango, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tenango, Tenango, UIM II'>Subprocuraduria de Procedimientos Penales Región Orinte, Tenango, Tenango, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD I'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD II'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD III'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD V'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD VI</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD VII'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UISD VII</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD I'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD II'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD III'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD IV'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, UICD IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, Centro de Atención Temprana 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, Centro de Atención Temprana 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Orinte, Tulancingo, Tulancingo, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Orinte, Zacualtipan, Zacualtipan, UIM Unica'>Subprocuraduria de Procedimientos Penales Región Orinte, Zacualtipan, Zacualtipan, UIM Unica</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI I'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI II'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI III'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI V'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, UI V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, Centro de Atención Temprana 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, Centro de Atención Temprana 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Actopan, Actopan, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM I'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM II'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM III'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Apan, UIM IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM I'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM II'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM III'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Apan, Tepeapulco, UIM IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM I'>Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM II'>Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM III'>Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Huichapan, Huichapan, UIM IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI I'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI II'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI III'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI V'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, UI V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, Centro de Atención Temprana 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, Centro de Atención Temprana 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Ixmiquilpan, Ixmiquilpan, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Jacala, Jacala, UIM Unica'>Subprocuraduria de Procedimientos Penales Región Poniente, Jacala, Chapulguacan, UIM Unica</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Jacala, Chapulguacan, UIM Unica'>Subprocuraduria de Procedimientos Penales Región Poniente, Jacala, Chapulguacan, UIM Unica</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, UI I'>Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, UI I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, UI II'>Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, UI II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, UI III'>Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, UI III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, Centro de Atención Temprana 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, Centro de Atención Temprana 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Mixquiahuala, Mixquiahuala, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI I'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI II'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI III'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI V'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, UI V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Tizayuca, Tizayuca, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD I'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD II'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD III'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD V'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UISD V</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD I'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, IUCD II'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD III'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, UICD IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, Centro de Atención Temprana 1er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, Centro de Atención Temprana 1er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, Centro de Atención Temprana 2do. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, Centro de Atención Temprana 2do. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, Centro de Atención Temprana 3er. Turno'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tula de Allende, Centro de Atención Temprana 3er. Turno</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM I'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM II'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM III'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM IV'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tepeji del Rio, UIM IV</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tlaxcuapan, UIM I'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tlaxcuapan, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tlaxcuapan, UIM II'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tlaxcuapan, UIM II</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tlaxcuapan, UIM III'>Subprocuraduria de Procedimientos Penales Región Poniente, Tula de Allende, Tlaxcuapan, UIM III</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Zimapan, Zimapan, UIM I'>Subprocuraduria de Procedimientos Penales Región Poniente, Zimapan, Zimapan, UIM I</option>
+              <option id='Subprocuraduria de Procedimientos Penales Región Poniente, Zimapan, Zimapan, UIM II'>Subprocuraduria de Procedimientos Penales Región Poniente, Zimapan, Zimapan, UIM II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD III'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD IV'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Pachuca de Soto, UISD IV</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD IV</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD V</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM SD VI</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM CD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM CD I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM CD'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Centro de justicia para mujeres, CJM CD II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD III'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD IV'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Adolecentes, UISD IV</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Unidad niños niñas y adolecentes, UISD I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Pachuca de Soto, Unidad niños niñas y adolecentes, UISD I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Actopan, Actopan, UIM I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Actopan, Actopan, UIM I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Huajutla de reyes, Huajutla de reyes, UIM I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Huajutla de reyes, Huajutla de reyes, UIM I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Huajutla de reyes, Huajutla de reyes, UIM II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Huajutla de reyes, Huajutla de reyes, UIM II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Huajutla de reyes, Huajutla de reyes, UIM III'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Huajutla de reyes, Huajutla de reyes, UIM III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Ixmiquilpan, Ixmiquilpan, UIM I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Ixmiquilpan, Ixmiquilpan, UIM I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Ixmiquilpan, Ixmiquilpan, UIM II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Ixmiquilpan, Ixmiquilpan, UIM II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Ixmiquilpan, Ixmiquilpan, UIM III'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Ixmiquilpan, Ixmiquilpan, UIM III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tizayuca, Tizayuca, UIM I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tizayuca, Tizayuca, UIM I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tizayuca, Tizayuca, UIM II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tizayuca, Tizayuca, UIM II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tizayuca, Tizayuca, UIM III'> Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tizayuca, Tizayuca, UIM III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM III'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM IV'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM IV</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM V'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tula de Allende, Tula de Allende, UIM V</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo UIM I'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo UIM I, UIM I</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo, UIM II'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo, UIM II</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo UIM III'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo, UIM III</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo, UIM IV'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo, UIM IV</option>
+              <option id='Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo, UIM V'>Subprocuraduria de Derechos Humanos y Servicios a la Comunidad, Tulancingo de Bravo, Tulancingo de Bravo UIM V</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM I'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM I</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM II'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM II</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM IV'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM IV</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM V'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM V</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM VII'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM VII</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM VIII'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM VIII</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM IX'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, UIM IX</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, Casos Masivos'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Pachuca de Soto, Pachuca de Soto, Casos Masivos</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tula de Allende, Tula de Allende, UIM I'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tula de Allende, Tula de Allende, UIM I</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tula de Allende, Tula de Allende, UIM II'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tula de Allende, Tula de Allende, UIM II</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tula de Allende, Tula de Allende, UIM III'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tula de Allende, Tula de Allende, UIM III</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tulancingo de bravo, Tulancingo de Bravo, UIM III'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tulancingo de bravo, Tulancingo de Bravo, UIM III</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tulancingo de bravo, Tulancingo de Bravo, UIM VI'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tulancingo de bravo, Tulancingo de Bravo, UIM VI</option>
+              <option id='Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tulancingo de bravo, Tulancingo de Bravo, UIM X'>Coordinación de Investigación y Recuperación de Vehículos Robados (CIRVR), Tulancingo de bravo, Tulancingo de Bravo, UIM X</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM I'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM I</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM II'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM II</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM III'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM III</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM IV'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM IV</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM V'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM V</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM VI'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, UIM VI</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, Extorsión I'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, Extorsión I</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, Extorsión II'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, Extorsión II</option>
+              <option id='Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, Extorsión III'>Unidad Especializada en Combate al Secuestro (UECS), Pachuca de Soto, Pachuca de Soto, Extorsión III</option>
+              <option id='Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM I'>Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM I</option>
+              <option id='Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM II'>Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM II</option>
+              <option id='Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM III'>Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM III</option>
+              <option id='Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM IV'>Centro de Operación Estratégica(COE), Pachuca de Soto, Pachuca de Soto, UIM IV</option>
+              <option id='Fiscalias, Pachuca de Soto, Trata de Personas, UIM Unica'>Fiscalias, Pachuca de Soto, Trata de Personas, UIM Unica</option>
+              <option id='Fiscalias, Pachuca de Soto, Genero, UIM Unica'>Fiscalias, Pachuca de Soto, Genero, UIM Unica</option>
+              <option id='Fiscalias, Pachuca de Soto, Anticorrupcion, UIM I<'>Fiscalias, Pachuca de Soto, Anticorrupcion, UIM I</option>
+              <option id='Fiscalias, Pachuca de Soto, Anticorrupcion, UIM II'>Fiscalias, Pachuca de Soto, Anticorrupcion, UIM II</option>
+              <option id='Fiscalias, Pachuca de Soto, Anticorrupcion, UIM III'>Fiscalias, Pachuca de Soto, Anticorrupcion, UIM III</option>
+              <option id='Fiscalias, Pachuca de Soto, Anticorrupcion, UIM IV'>Fiscalias, Pachuca de Soto, Anticorrupcion, UIM IV</option>
+              <option id='Fiscalias, Pachuca de Soto, Electorales, UIM Unica'>Fiscalias, Pachuca de Soto, Electorales, UIM Unica</option>
+              <option id='Fiscalias, Pachuca de Soto, Desaparicion de Personas, Desaparicion de Personas, UIM I'>Fiscalias, Pachuca de Soto, Desaparicion de Personas, Desaparicion de Personas, UIM I</option>
+              <option id='Fiscalias, Pachuca de Soto, Desaparicion de Personas, UIM II'>Fiscalias, Pachuca de Soto, Desaparicion de Personas, UIM II</option>
+              <option id='Fiscalias, Pachuca de Soto, Desaparicion de Personas, UIM III'>Fiscalias, Pachuca de Soto, Desaparicion de Personas, UIM III</option>
+              <option id='Fiscalias, Pachuca de Soto, Desaparicion de Personas, UIM IV'>Fiscalias, Pachuca de Soto, Desaparicion de Personas, UIM IV</option>
+            </select>
+          </div>
+        </div>
         {this.state.agencia && this.state.nombre ?
           <Controls
             isRunning={isRunning}

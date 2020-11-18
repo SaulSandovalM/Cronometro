@@ -79,9 +79,9 @@ export default class Home extends Component {
     )
 
     return (
-      <div style={{ margin: '30px' }}>
+      <div style={{ padding: '30px', background: '#f4f4f4', minHeight: '93vh' }}>
         <h1>Lista de Tiempos</h1>
-        <button onClick={this.handleFile} style={{ background: '#092432', color: 'white' }}>
+        <button onClick={this.handleFile} style={{ padding: '8px', border: 0, background: '#092432', color: 'white', marginRight: '10px' }}>
           EXPORTAR A EXCEL
         </button>
         <input style={{ marginTop: '15px', marginBottom: '15px', height: '25px' }} value={this.state.search} onChange={this.updateSearch.bind(this)} placeholder='Ingresa la agencia a buscar' />
@@ -98,7 +98,7 @@ export default class Home extends Component {
           {filterData.map(item =>
             <div style={{ display: 'flex', justifyContent: 'center', borderBottom: '1px solid grey' }}>
               <div style={{ width: '20%', height: '40px', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-                {item.agencia}
+                <div className='test'>{item.agencia}</div>
               </div>
               <div style={{ width: '20%', height: '40px', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                 {item.nombre}
