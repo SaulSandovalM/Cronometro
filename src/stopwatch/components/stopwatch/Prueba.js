@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './Stopwatch.css'
 import firebase from '../../../Firebase'
+import './Stopwatch.css'
 
-export default class Stopwatch extends Component {
+export default class Cronometro extends Component {
   constructor (props) {
     super(props)
     this.state = {
